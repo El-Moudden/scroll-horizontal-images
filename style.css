@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #191919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+#gallery {
+  display: flex;
+  overflow-x: scroll;
+  
+
+  
+  width: 1000px;
+
+
+}
+.collection{
+  
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4 , auto);
+  grid-gap: 20px;
+  padding: 10px;
+  flex: none;
+ 
+}
+
+.btn-back , .btn-next {
+  width: 30px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+
+.collection img {
+  width: 100%;
+  height: 350px;
+  filter: grayscale(100%);
+  transition:  0.5s ease;
+  
+}
+
+.collection img:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+#gallery::-webkit-scrollbar {
+  display: none;
+}
